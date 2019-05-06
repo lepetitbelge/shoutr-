@@ -1,1 +1,9 @@
-<%= erb :post %>
+<div class="col-3"></div>
+
+<div class="col-6">
+  <% @posts.each do |post| %>
+    <%= erb :post, locals: {post: post} %>
+  <% end %>
+</div>
+
+<div class="col-3"></div>
