@@ -20,7 +20,7 @@
           <p><%= post[:rating] || "No ratings" %></p>
           <i class="far fa-star"></i>
         </div>
-        <a id="comment-link" href="#">Read comments</a>
+        <a id="comment-link" href="#">Read comments (<%= post[:comments].count %>) </a>
       </div>
     </div>
       <div class="post-comments">

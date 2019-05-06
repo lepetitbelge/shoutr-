@@ -3,8 +3,7 @@ body {
 }
 .container {
   width: 80%;
-  margin-left-right: auto;
-  margin-top: 17px;
+  margin: 17px auto 40px auto;
 }
 span.light {
   font-weight: lighter;
@@ -14,7 +13,8 @@ span.light {
   background-color: rgb(240,240,240);
   border: 1px solid rgba(108, 117, 124, 0.8);
   border-radius: 2px;
-  box-shadow: 1px 1px 1px rgb(220, 226, 232);
+  /*box-shadow: 1px 1px 1px rgb(220, 226, 232);*/
+  box-shadow: 0 0 0 1px rgba(100,100,100,.15), 0 2px 3px rgba(100,100,100,.2);
 }
 .post-details {
   padding: 1rem;
@@ -31,10 +31,11 @@ span.light {
   margin-bottom: 0.5rem;
 }
 .post-footer {
+  align-items: center;
   border-top: 1px solid rgb(108, 117, 124);
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  font-size: 14px;
 }
 .rating {
   display: flex;
