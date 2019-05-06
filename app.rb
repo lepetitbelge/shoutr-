@@ -1,7 +1,8 @@
-require "sinatra"
-require "sinatra/reloader" if development?
-require "pry-byebug"
-require "better_errors"
+require 'sinatra'
+require 'sinatra/reloader' if development?
+require 'pry-byebug'
+require 'better_errors'
+require_relative 'database'
 
 configure :development do
   use BetterErrors::Middleware
