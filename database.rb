@@ -3,7 +3,7 @@ DB = [
     title: 'Mon premier article',
     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ratione harum illo, dicta minima rerum quod natus cupiditate voluptatibus rem! Amet reprehenderit voluptatum animi, eligendi quia quos reiciendis veritatis magni.',
     photo: 'https://unsplash.it/600?image=0',
-    rating: '5',
+    rating: '5.0',
     writer: 'Yeezy',
     date: 'Jan 1'
   },
@@ -11,14 +11,14 @@ DB = [
     title: 'Un deuxième article',
     content: 'Eventually the guys with real ideas not running a scam on the world will overcome. I used an exclamation just to be an asshole and also to make a point! LOL Young Thug is super inspiring to me. Amazing artist!!! I also wanted to point out that it’s the first album to go number 1 off of streaming!!! ',
     photo: 'https://unsplash.it/600?image=1',
-    rating: '2',
+    rating: '2.4',
     writer: 'Yeezy',
     date: 'Feb 2'
   },
   {
     title: 'Tout sur mon chat',
     content: 'also to Kim’s hair and makeup Lorraine jewelry and the whole style squad at Balmain and the Yeezy team. When companies doubt me they doubt us. Wes daytime',
-    rating: '4',
+    rating: '4.3',
     writer: 'Yeezy',
     date: 'March 3'
   },
@@ -33,7 +33,7 @@ DB = [
     title: "L'affaire Cromas Town",
     content: 'Thank you Anna for the invite thank you to the whole Vogue team Thank you to everybody who made The Life of Pablo the number 1 album in the world!!! What if Kanye made a song about Kanye ',
     photo: 'https://unsplash.it/600?image=3',
-    rating: '4',
+    rating: '4.7',
     writer: 'Yeezy',
     date: 'May 5'
   }

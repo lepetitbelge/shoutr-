@@ -10,15 +10,21 @@
       </div>
       <h4 class="post-title"><%= post[:title] %></h4>
       <div class="post-image">
-        <img src=<%= post[:photo] || "/image-alternative.png" %>>
+        <% if post[:photo] %>
+          <img src=<%= post[:photo] || "/image-alternative.png" %>>
+        <% end %>
       </div>
       <div class="post-content">
         <p><%= post[:content] %></p>
       </div>
       <div class="post-footer">
         <div class="rating">
-          <p><%= post[:rating] || "No ratings" %></p>
-          <i class="far fa-star"></i>
+          <% if post[:rating] %>
+            <i class="far fa-star"></i>
+            <p><%= post[:rating]%>/5</p>
+          <% else %>
+              <p>Be the first to rate -> action needed</p>
+          <% end %>
         </div>
         <a id="comment-link" href="#">Read comments (<%= post[:comments].count %>) </a>
       </div>

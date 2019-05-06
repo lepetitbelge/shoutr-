@@ -1,6 +1,43 @@
 body {
   background-color: rgb(220, 226, 232);
 }
+/* NAVBAR CSS -> position in order of appearance*/
+.navbar {
+  padding: 0 10%;
+}
+.navigation {
+  display: inline;
+  float: left;
+}
+.search-and-profile {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#navbarDropdown {
+  width: 30px;
+  border-radius: 50%;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.dropdown-item {
+  font-weight: light;
+  font-size: 13px;
+}
+.btn-custom {
+  background-color: rgba(108, 117, 124, .8);
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0.2rem 1rem;
+}
+.btn-custom:hover {
+  color: white;
+  background-color: rgba(108, 117, 124, 1);
+}
+
+/* HOME PAGE CSS */
 .container {
   width: 80%;
   margin: 17px auto 40px auto;
@@ -13,14 +50,13 @@ span.light {
   background-color: rgb(240,240,240);
   border: 1px solid rgba(108, 117, 124, 0.8);
   border-radius: 2px;
-  /*box-shadow: 1px 1px 1px rgb(220, 226, 232);*/
   box-shadow: 0 0 0 1px rgba(100,100,100,.15), 0 2px 3px rgba(100,100,100,.2);
 }
 .post-details {
   padding: 1rem;
 }
 .post-title{
-  color: rgb(108, 117, 124);
+  font-weight: bold;
 }
 .post-name-and-date {
   display: flex;
@@ -29,6 +65,9 @@ span.light {
   border-radius: 2px;
   width: 100%;
   margin-bottom: 0.5rem;
+}
+.post-content {
+  font-weight: lighter;
 }
 .post-footer {
   align-items: center;
@@ -43,7 +82,7 @@ span.light {
 }
 .rating p {
   margin-bottom: 0;
-  padding-right: 0.25rem;
+  padding-left: 0.25rem;
 }
 #comment-link {
   color: rgb(108, 117, 124);
