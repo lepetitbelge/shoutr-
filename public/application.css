@@ -1,0 +1,49 @@
+body {
+  background-color: rgb(220, 226, 232);
+}
+.container {
+  width: 80%;
+  margin-left-right: auto;
+  margin-top: 17px;
+}
+span.light {
+  font-weight: lighter;
+}
+.post-card {
+  margin-top: 10px;
+  background-color: rgb(240,240,240);
+  border: 1px solid rgba(108, 117, 124, 0.8);
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px rgb(220, 226, 232);
+}
+.post-details {
+  padding: 1rem;
+}
+.post-title{
+  color: rgb(108, 117, 124);
+}
+.post-name-and-date {
+  display: flex;
+}
+.post-image img {
+  border-radius: 2px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.post-footer {
+  border-top: 1px solid rgb(108, 117, 124);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rating {
+  display: flex;
+  align-items: center;
+}
+.rating p {
+  margin-bottom: 0;
+  padding-right: 0.25rem;
+}
+#comment-link {
+  color: rgb(108, 117, 124);
+}
