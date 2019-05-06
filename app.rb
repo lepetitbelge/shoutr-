@@ -9,5 +9,16 @@ configure :development do
 end
 
 get '/' do
+  @posts = DB
+  @comments = COMMENTS
+  @posts_with_comments = combine_posts_and_comments
   erb :index
+end
+
+private
+
+def combine_posts_and_comments
+  @posts.each_with_index do |post, index|
+    post[:comments] = @comments[index]
+  end
 end
