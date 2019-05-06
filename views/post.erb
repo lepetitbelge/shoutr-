@@ -1,1 +1,13 @@
-
+<% @posts_with_comments.each do |post| %>
+  <div class="post-card">
+    <div class="card-description">
+      <p><%= post[:title] %></p>
+      <p><%= post[:content] %></p>
+      <p><%= post[:rating] || "No ratings" %></p>
+      <i class="far fa-star"></i>
+      <img src=<%= post[:photo] || "/image-alternative.png" %>>
+  </div>
+  <% post[:comments].each do |comment| %>
+    <p><%= comment %></p>
+  <% end %>
+<% end %>
