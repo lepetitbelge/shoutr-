@@ -12,14 +12,17 @@ end
 get '/' do
   posts = DB
   comments = COMMENTS
-  @posts = combine_posts_and_comments(posts, comments)
+  @posts = combine_posts_and_comments(posts, comments).reverse
   erb :index
 end
 
 post '/post_new' do
   result = check_params(params)
-  DB << result && COMMENTS << [] unless result.nil?
-  puts "weet even niet hoe ik verder moet"
+  unless result.nil?
+    DB << result
+    COMMENTS << []
+  end
+  redirect '/'
 end
 
 private
@@ -31,9 +34,9 @@ def combine_posts_and_comments(posts, comments)
 end
 
 def check_params(params)
-  unless params[:title].nil? || params[:content].nil?
+  if !is_empty?(params[:title]) && !is_empty?(params[:content])
     date = Time.now.strftime('%b%e')
-    new_post = {
+    {
       title: params[:title],
       content: params[:content],
       photo: '/favicon.jpg',
@@ -42,5 +45,8 @@ def check_params(params)
       date: date
     }
   end
-  new_post
+end
+
+def is_empty?(string)
+  string.nil? || string.empty?
 end
