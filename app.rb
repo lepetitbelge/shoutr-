@@ -40,7 +40,6 @@ def check_params(params)
       title: params[:title],
       content: params[:content],
       photo: '/favicon.jpg',
-      rating: '',
       writer: 'Anonymous',
       date: date
     }

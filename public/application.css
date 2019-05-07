@@ -151,3 +151,12 @@ span.light {
   border-radius: 3px;
   padding-left: 5px;
 }
+
+/* HOME PAGE RIGHT */
+.right-table {
+  width: 100%;
+}
+.table-title {
+  text-align: center;
+  padding: 10px;
+}
