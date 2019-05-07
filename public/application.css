@@ -1,5 +1,10 @@
+/* FULL PAGE STYLING */
 body {
   background-color: rgb(220, 226, 232);
+}
+.container {
+  width: 80%;
+  margin: 20px auto 30px auto;
 }
 /* NAVBAR CSS -> position in order of appearance*/
 .navbar {
@@ -37,20 +42,67 @@ body {
   background-color: rgba(108, 117, 124, 1);
 }
 
-/* HOME PAGE CSS */
-.container {
-  width: 80%;
-  margin: 17px auto 40px auto;
+/* HOME PAGE LEFT */
+.left-profile {
+  width: 100%;
+  height: 15rem;
+  text-align: center;
 }
+.sticky-custom {
+  position: sticky;
+  top: 60px;
+}
+.left-photo {
+  height: 60%;
+  background-image: url("/logo-skello.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.left-details {
+  height: 40%;
+}
+.left-stats {
+  display: flex;
+  justify-content: space-around;
+}
+.stats-text p {
+  margin: 0;
+  font-weight: lighter;
+}
+.stats-numbers p {
+  color: rgb(108, 117, 124);
+  font-size: 14px;
+  font-weight: bolder;
+}
+.sexify-button {
+  border: 1px solid rgb(108, 117, 124);
+  border-radius: 20px;
+  background-image: url("/sexify4.jpg"), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-weight: bold;
+  transition: ease-in-out 0.15s;
+  margin: 20px 20% 0 20%;
+  width: 60%;
+  cursor: pointer;
+}
+.sexify-button:hover {
+  transform: scale(1.05);
+  color: white;
+}
+/* HOME PAGE CENTER */
 span.light {
   font-weight: lighter;
 }
-.post-card {
-  margin-top: 10px;
+.box-styling {
   background-color: rgb(240,240,240);
   border: 1px solid rgba(108, 117, 124, 0.8);
   border-radius: 2px;
   box-shadow: 0 0 0 1px rgba(100,100,100,.15), 0 2px 3px rgba(100,100,100,.2);
+}
+.post-card {
+  margin-bottom: 10px;
 }
 .post-details {
   padding: 1rem;
