@@ -34,7 +34,7 @@ def combine_posts_and_comments(posts, comments)
 end
 
 def check_params(params)
-  if !is_empty?(params[:title]) && !is_empty?(params[:content])
+  if !empty?(params[:title]) && !empty?(params[:content])
     date = Time.now.strftime('%b%e')
     {
       title: params[:title],
@@ -47,6 +47,6 @@ def check_params(params)
   end
 end
 
-def is_empty?(string)
+def empty?(string)
   string.nil? || string.empty?
 end

@@ -87,3 +87,16 @@ span.light {
 #comment-link {
   color: rgb(108, 117, 124);
 }
+.post-comments {
+  margin: 0 1rem;
+}
+.invisible {
+  visibility: hidden;
+  height: 0px;
+}
+.post-comments p {
+  background-color: rgb(255,255,255);
+  border-radius: 3px;
+  padding-left: 5px;
+  transition: ease-in 1s;
+}

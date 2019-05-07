@@ -24,9 +24,10 @@
       <a id="comment-link" href="#">Read comments (<%= post[:comments].count %>)</a>
     </div>
   </div>
-  <div class="post-comments">
-    <% post[:comments].each do |comment| %>
-    <p><%= comment %></p>
+  <div class="post-comments invisible">
+    <h6>Comments</h6>
+    <% post[:comments].each_with_index do |comment, index| %>
+    <p value=index ><%= comment %></p>
     <% end %>
   </div>
 </div>
