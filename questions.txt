@@ -53,11 +53,26 @@ CREATE TABLE IF NOT EXISTS users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   firstname VARCHAR(50) NOT NULL,
   lastname VARCHAR(50) NOT NULL,
-  gender ENUM('m','f','u') NOT NULL,
+  gender ENUM('m','f','u'),
   email VARCHAR(255) NOT NULL,
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+In rails this would be:
+class CreateUsers < ActiveRecord::Migration
+  def change
+    create_table :users do |t|
+      t.string :firstname
+      t.string :lastname
+      t.integer :gender
+      t.string :email
+
+      t.timestamps null: false
+    end
+  end
+end
+
+-> although gender would demand more if you want it to show up as male/female/undisclosed
 
 2. Write a query on the previous table that lists the 10 most recently added users.
 
