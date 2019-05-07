@@ -4,6 +4,8 @@ require 'pry-byebug'
 require 'better_errors'
 require_relative 'database'
 
+set :bind, '0.0.0.0'
+
 configure :development do
   use BetterErrors::Middleware
   BetterErrors.application_root = File.expand_path('..', __FILE__)
