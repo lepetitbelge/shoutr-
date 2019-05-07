@@ -72,7 +72,7 @@ class CreateUsers < ActiveRecord::Migration
   end
 end
 
--> although gender would demand more if you want it to show up as male/female/undisclosed
+-> although gender would demand more if you want it to show up as male/female/undisclosed (enum etc.)
 
 2. Write a query on the previous table that lists the 10 most recently added users.
 
