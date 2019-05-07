@@ -1,0 +1,13 @@
+<div class="col-3">
+  <%= erb :left_side_bar %>
+</div>
+
+<div class="col-6">
+  <% @posts.each do |post| %>
+    <%= erb :post, locals: {post: post} %>
+  <% end %>
+</div>
+
+<div class="col-3">
+  <%= erb :right_side_bar %>
+</div>

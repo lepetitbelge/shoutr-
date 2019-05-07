@@ -1,0 +1,95 @@
+BACKEND - Programming
+These can be done in any language you're comfortable with
+
+1. Give a regular expression that detects hexadecimal numbers in a text.
+For example, ‘0x0f4’, ‘0acdadecf822eeff32aca5830e438cb54aa722e3’, ‘8BADF00D’ should be detected.
+
+> regexp = /(0x)?[0-9a-f]+/i
+
+2.Here is the pseudo code of a function that is defined recursively:
+-  f(0) = 1;
+-  f(1) = 3;
+-  f(n)= 3 * f(n-1) - f(n-2);
+Provide an implementation for ‘f’. Bonus points for a non recursive implementation.
+
+>
+recursive:
+def f(x)
+  if x == 0
+    1
+  elsif x == 1
+    3
+  elsif x > 1
+    3 * f(x-1) - f(x-2)
+  end
+end
+
+non-recursive:
+def nr_f(x)
+  return 1 if x == 0
+  x1 = 1
+  x2 = 3
+  (2..x).each do
+    x3 = 3 * x2 - x1
+    x1 = x2
+    x2 = x3
+  end
+  x2
+end
+
+BACKEND - MySQL
+
+1. Write a CREATE TABLE query for a table storing information on users. It will store:
+  - id,
+  - firstname,
+  - lastname,
+  - gender,
+  - email,
+  - created_at
+
+> creating a table in MySQL:
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  firstname VARCHAR(50) NOT NULL,
+  lastname VARCHAR(50) NOT NULL,
+  gender ENUM('m','f','u'),
+  email VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+In rails this would be:
+class CreateUsers < ActiveRecord::Migration
+  def change
+    create_table :users do |t|
+      t.string :firstname
+      t.string :lastname
+      t.integer :gender
+      t.string :email
+
+      t.timestamps null: false
+    end
+  end
+end
+
+-> although gender would demand more if you want it to show up as male/female/undisclosed
+
+2. Write a query on the previous table that lists the 10 most recently added users.
+
+>
+SELECT * FROM users
+ ORDER BY created_at DESC
+ LIMIT 10
+
+GENERAL - Creativity
+Si vous êtes Français, vous pouvez répondre en Français.
+
+1. Describe the color yellow to someone who is blind
+
+> Yellow is a color that feels warm and energetic, without being too loud or aggressive. It's like the sun shining on your face. It describes the emotions of friendliness, optimism, confidence and sometimes even fear. Feel this banana. Or even take a bite from it. That softness, when biting, is what yellow feels like. It's also very nourishing, filling. And if yellow were a sound, it would be the music at a beach bar. It gives good vibes, provides an energetic buzz and is always present. Really, just like the sun.
+
+3. Describe the data model you’d use for a Battleship game. What are the key objects? How will your code use them?
+
+> I would use 4 models: player, board, ship and game.
+Everything comes together in a game. Every game has two players, who each have a score or ranking to pair evenly matched players. Each player in this game has a board, which has 10 horizontal and 10 vertical positions. On these positions ships will be placed, as they belong to a board. Ships have a starting position, a length, a direction (vertical or horizontal), hit/not boolean array for ship parts and a sunk/not boolean for whole ship. During the game players will take turns to 'attack', which will either hit or miss their opponent. Basically, if attack coordinates correspond with one of the ship coordinates (which hasn't yet been hit), there's a hit. Otherwise there is a miss. This could be made visible on a screen, representing the board of their opponent, with X marking hits and O marking misses. If all ships are sunk, a winner is declared.
+

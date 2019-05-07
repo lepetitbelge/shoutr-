@@ -1,0 +1,162 @@
+/* FULL PAGE STYLING */
+body {
+  background-color: rgb(220, 226, 232);
+}
+.container {
+  width: 80%;
+  margin: 20px auto 30px auto;
+}
+/* NAVBAR CSS -> position in order of appearance*/
+.navbar {
+  padding: 0 10%;
+}
+.navigation {
+  display: inline;
+  float: left;
+}
+.search-and-profile {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#navbarDropdown {
+  width: 30px;
+  border-radius: 50%;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.dropdown-item {
+  font-weight: light;
+  font-size: 13px;
+}
+.btn-custom {
+  background-color: rgba(108, 117, 124, .8);
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0.2rem 1rem;
+}
+.btn-custom:hover {
+  color: white;
+  background-color: rgba(108, 117, 124, 1);
+}
+
+/* HOME PAGE LEFT */
+.left-profile {
+  width: 100%;
+  height: 15rem;
+  text-align: center;
+  position: relative;
+}
+.sticky-custom {
+  position: sticky;
+  top: 60px;
+}
+.left-photo {
+  height: 60%;
+  background-image: url("/logo-skello.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.left-details {
+  height: 40%;
+}
+.left-stats {
+  display: flex;
+  justify-content: space-around;
+}
+.stats-text p {
+  margin: 0;
+  font-weight: lighter;
+}
+.stats-numbers p {
+  color: rgb(108, 117, 124);
+  font-size: 14px;
+  font-weight: bolder;
+}
+.sexify-button {
+  border: 1px solid rgb(108, 117, 124);
+  border-radius: 20px;
+  background-image: url("/sexify4.jpg"), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  background-size: cover;
+  background-position: center;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: ease-in-out 0.15s;
+  margin-top: 20px;
+}
+.sexify-button:hover {
+  transform: scale(1.05);
+  color: white;
+}
+/* HOME PAGE CENTER */
+span.light {
+  font-weight: lighter;
+}
+.box-styling {
+  background-color: rgb(240,240,240);
+  border: 1px solid rgba(108, 117, 124, 0.8);
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(100,100,100,.15), 0 2px 3px rgba(100,100,100,.2);
+}
+.post-card {
+  margin-bottom: 10px;
+}
+.post-details {
+  padding: 1rem;
+}
+.post-title{
+  font-weight: bold;
+}
+.post-name-and-date {
+  display: flex;
+}
+.post-image img {
+  border-radius: 2px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.post-content {
+  font-weight: lighter;
+}
+.post-footer {
+  align-items: center;
+  border-top: 1px solid rgb(108, 117, 124);
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.rating {
+  display: flex;
+  align-items: center;
+}
+.rating p {
+  margin-bottom: 0;
+  padding-left: 0.25rem;
+}
+#comment-link {
+  color: rgb(108, 117, 124);
+}
+.post-comments {
+  margin: 0 1rem;
+}
+.invisible {
+  visibility: hidden;
+  height: 0px;
+}
+.post-comments p {
+  background-color: rgb(255,255,255);
+  border-radius: 3px;
+  padding-left: 5px;
+}
+
+/* HOME PAGE RIGHT */
+.right-table {
+  width: 100%;
+}
+.table-title {
+  text-align: center;
+  padding: 10px;
+}
