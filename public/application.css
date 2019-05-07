@@ -86,7 +86,6 @@ body {
   font-weight: bold;
   transition: ease-in-out 0.15s;
   margin-top: 20px;
-  width: 60%;
 }
 .sexify-button:hover {
   transform: scale(1.05);
